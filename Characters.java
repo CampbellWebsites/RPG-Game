@@ -21,6 +21,7 @@ public class Characters {
         h=0;
         grade=0;
         ClothesList=new ArrayList<Clothes>();
+        
         dx=0;
         dy=0;
         pic = new ImageIcon();
@@ -28,7 +29,7 @@ public class Characters {
         description = "";
     }
 
-    public Characters(int xV, int yV, int width, int height, int gr, ImageIcon p, Clothes we, ArrayList<Clothes> list, String name, String description){
+    public Characters(int xV, int yV, int width, int height, int gr, ImageIcon p, ArrayList<Clothes> list, String name, String description){
         x=xV;
         y=yV;
         w=width;
@@ -42,6 +43,21 @@ public class Characters {
         this.name=name;
         this.description=description;
     }
+
+    // public Characters(int xV, int yV, int width, int height, int gr, ImageIcon p, Clothes we, ArrayList<Clothes> list, String name, String description){
+    //     x=xV;
+    //     y=yV;
+    //     w=width;
+    //     h=height;
+    //     grade=gr;
+    //     dx=0;
+    //     dy=0;
+    //     pic = p;
+    //     this.cloth=cloth;
+    //     ClothesList=list;
+    //     this.name=name;
+    //     this.description=description;
+    // }
 
     // public Characters(int xV, int yV, int width, int height, int sp, int hea, int dam, int st, ImageIcon p, String name, String description){
     //     x=xV;
@@ -169,4 +185,5 @@ public class Characters {
     //add collison
     //if collision is true is mouseMoved have a boolean that flipped to true
     
+
 }

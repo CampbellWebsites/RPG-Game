@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 
 public class Campbell extends Characters {
@@ -6,10 +8,17 @@ public class Campbell extends Characters {
     }
 
     public Campbell(int x, int y){
-        super(x,y, 200, 250, 2,5,7674,1, new ImageIcon("campbell.png"), "Campbell", "Campbell is a cancer researcher and a fashion model in NYC. She ");
+        super(x,y, 200, 250, 2, new ImageIcon("campbell.png"), new YellowShirt(), "Campbell", "Campbell is a cancer researcher and a fashion model in NYC. She ");
     }
 
     public String toString(){
         return "Campbell";
     }
+         public static ArrayList <Clothes> setListCampbell(){
+        ArrayList <Clothes> temp = new ArrayList <Clothes> ();
+        temp.add(new YellowShirt());
+        temp.add(new YellowShirt());
+        temp.add(new YellowShirt());
+        return temp;
+}
 }

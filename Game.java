@@ -2,12 +2,18 @@
 import java.awt.*;
 import java.awt.event.*; 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.*; 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.Scanner;
+import java.io.IOException;
 
 //Add hover for character, descripton, and other characteristics (ill change later), add mouse click for select character, add graphics, add class/fix class clothes, add subclass shirts, bottoms, hats, shoes, accessories, 
 
-public class Game  extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener{
+public class Game extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener{
 
 	
 	private BufferedImage back; 
@@ -22,6 +28,7 @@ public class Game  extends JPanel implements Runnable, KeyListener, MouseListene
 	private int i;
 	private boolean collision;
 	private Characters hoveredChar;
+	private File saveFile;
 	//private ArrayList <Ranged> rangedWeap;
 	//private Queue <Enemy> enemies;
 
@@ -46,6 +53,7 @@ public class Game  extends JPanel implements Runnable, KeyListener, MouseListene
 		collision=false;
 		//rangedWeap = new ArrayList <Ranged>();
 		//enemies = setEs();
+		saveFile = new File("saved_file2.0txt");
 	}
 
 	// public Queue <Enemy> setEs(){
@@ -56,6 +64,47 @@ public class Game  extends JPanel implements Runnable, KeyListener, MouseListene
 	// 	return temp;
 	// }
 
+	public void createFile(){
+            try {
+			if(saveFile.createNewFile()){
+				System.out.println("Successfully createdfile!");
+			}
+			else{
+				System.out.println("File already exists!");
+			}
+            } catch (IOException ex) {
+            }
+	}
+	
+	public void writeToFile(){
+		FileWriter myWriter = null;
+            try {
+                myWriter = new FileWriter(saveFile);
+			if(charList.isEmpty()){
+				myWriter.write("win");
+			}
+			else{
+				myWriter.write("You have" + charList.size() + "enemies left");
+			}
+            } catch (IOException ex) {
+            } finally {
+                try {
+                    myWriter.close();
+                } catch (IOException ex) {
+                }
+            }
+	}
+
+
+	public void readFile(){
+            try {
+			Scanner sc = new Scanner(saveFile);
+			while(sc.hasNext()){
+				System.out.println(sc.nextLine());
+			}
+            } catch (FileNotFoundException ex) {
+            }
+	}
 
 	public ArrayList <Characters> setCharList(){
         ArrayList <Characters> temp = new ArrayList <>();
@@ -144,9 +193,6 @@ public void drawChooseScreen(Graphics g2d){
         g2d.setFont(new Font("Arial", Font.PLAIN, 20));
         g2d.setColor(Color.WHITE);
         g2d.drawString("Name: " + hoveredChar.getName(), 50, 50);
-        g2d.drawString("Health: " + hoveredChar.getHEA(), 50, 80);
-        g2d.drawString("Damage: " + hoveredChar.getDAM(), 50, 110);
-        g2d.drawString("Stamina: " + hoveredChar.getSTAM(), 50, 140);
         g2d.drawString("Description: " + hoveredChar.getDescription(), 50, 170);
     }
 }
@@ -158,7 +204,8 @@ public void drawChooseScreen(Graphics g2d){
 		}
 	}
 
-	
+	public void drawAssignmentScreen(Graphics g2d)
+
 	private void drawScreens(Graphics g2d) {
 		switch(screen) {
 			case "start":
@@ -168,7 +215,9 @@ public void drawChooseScreen(Graphics g2d){
 			drawChooseScreen(g2d);
 			break;
 			case "selection":
-				drawSelectScreen(g2d);
+			drawSelectScreen(g2d);
+			case "assignments":
+			draw
 		}
 	}
 
@@ -318,8 +367,5 @@ public void drawChooseScreen(Graphics g2d){
 		
 	}
 	
-	
-	
-
 	
 }
