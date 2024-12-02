@@ -1,4 +1,5 @@
 import javax.swing.ImageIcon;
+
 import java.util.ArrayList;
 
 public final class Caitlyn extends Characters {
