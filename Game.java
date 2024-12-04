@@ -205,7 +205,9 @@ public void drawChooseScreen(Graphics g2d){
 	}
 
 	public void drawAssignmentScreen(Graphics g2d)
-
+{
+	
+}
 	private void drawScreens(Graphics g2d) {
 		switch(screen) {
 			case "start":
