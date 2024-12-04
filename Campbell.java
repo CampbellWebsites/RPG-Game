@@ -8,7 +8,7 @@ public class Campbell extends Characters {
     }
 
     public Campbell(int x, int y){
-        super(x,y, 200, 250, 2, new ImageIcon("campbell.png"), new YellowShirt(), "Campbell", "Campbell is a cancer researcher and a fashion model in NYC. She ");
+        super(x,y, 200, 250, 2, new ImageIcon("campbell.png"), setList(), new YellowShirt(), "Campbell", "Campbell is a cancer researcher and a fashion model in NYC. She ");
     }
 
     public String toString(){
@@ -22,3 +22,4 @@ public class Campbell extends Characters {
         return temp;
 }
 }
+ 
