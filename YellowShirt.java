@@ -31,3 +31,4 @@ public class YellowShirt extends Clothes{
 //add instruction page for the fashion school
 //save file
 //add high score
+//add auto sync
