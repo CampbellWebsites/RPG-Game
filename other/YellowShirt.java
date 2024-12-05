@@ -1,4 +1,4 @@
-
+package other;
 public class YellowShirt extends Clothes{
     public YellowShirt(){
         super();

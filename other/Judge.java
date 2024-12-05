@@ -1,3 +1,7 @@
+package other;
+
+import javax.swing.ImageIcon;
+
 public class Judge extends Characters{
     public Judge(){
         super();

@@ -1,10 +1,18 @@
+package other;
 
 import java.awt.*;
 import java.awt.event.*; 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
-import javax.swing.*; 
+import javax.swing.*;
+
+import characters.Caitlyn;
+import characters.Aliki;
+import characters.Campbell;
+import characters.Jules;
+import characters.Marinne;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;

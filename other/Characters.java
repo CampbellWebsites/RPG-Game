@@ -1,5 +1,7 @@
+package other;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
+
 import java.util.ArrayList;
 
 //add get weapon

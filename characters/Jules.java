@@ -1,4 +1,7 @@
+package characters;
 import javax.swing.ImageIcon;
+
+import other.Characters;
 
 public class Jules extends Characters {
     public Jules() {

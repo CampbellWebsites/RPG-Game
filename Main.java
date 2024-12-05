@@ -1,8 +1,8 @@
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
 import javax.swing.*;
+import other.Game;
 
 public class Main extends JFrame{
 	private static final int WIDTH =1800;
@@ -33,7 +33,7 @@ public class Main extends JFrame{
 			@Override
 			public void windowClosing(WindowEvent e) {
 				// TODO Auto-generated method stub
-				play.writetoFile();
+				//play.writetoFile();
 			}
 
 			@Override

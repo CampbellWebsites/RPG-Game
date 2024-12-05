@@ -1,3 +1,4 @@
+package other;
 public class Clothes {
 
     int x,y,w,h;

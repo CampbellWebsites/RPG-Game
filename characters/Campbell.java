@@ -1,6 +1,11 @@
+package characters;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
+
+import other.Characters;
+import other.Clothes;
+import other.YellowShirt;
 
 public class Campbell extends Characters {
     public Campbell() {
@@ -14,7 +19,7 @@ public class Campbell extends Characters {
     public String toString(){
         return "Campbell";
     }
-         public static ArrayList <Clothes> setListCampbell(){
+            public static ArrayList <Clothes> setListCampbell(){
         ArrayList <Clothes> temp = new ArrayList <Clothes> ();
         temp.add(new YellowShirt());
         temp.add(new YellowShirt());

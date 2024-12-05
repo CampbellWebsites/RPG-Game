@@ -1,4 +1,9 @@
+package characters;
 import javax.swing.ImageIcon;
+
+import other.Characters;
+import other.Clothes;
+import other.YellowShirt;
 
 import java.util.ArrayList;
 

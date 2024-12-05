@@ -1,4 +1,4 @@
-// package src.main.chatroom;
+// package main.chatroom;
 
 // import java.io.IOException;
 // import java.net.ServerSocket;
